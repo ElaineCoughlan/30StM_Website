@@ -1,0 +1,48 @@
+body{
+color:white;
+font-family:Verdana, Arial, Helvetica;
+
+background-image: url(../media/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+h1,h2{
+margin-top:0;
+padding-right:2%;
+padding-left:2%;
+}
+
+.container {border:solid black 1px;
+padding:2%;
+}
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+	width:650; 
+	height:366;}
+
+	.title
+{
+ background: url(../media/black-15-trans.png); 
+ color: #fff; 
+ padding: 4px 12px;
+ margin: 24px 0;
+}
+.album
+{
+ background: url(../media/black-35-trans.png);
+ color: #fff; 
+ padding: 4px 12px;
+ margin: 24px 0;
+}
+.black-50 
+{ background: url(../media/black-50-trans.png); 
+color: #fff; 
+padding: 4px 12px; 
+margin: 24px 0;
+ }

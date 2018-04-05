@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Album Art and Wallpapers</title>
+<link href="css/gallery.css" rel="stylesheet" type="text/css">
+
+   <link rel="stylesheet" href="styles.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script
+
+</head>
+<body>
+
+<div id='cssmenu'>
+<ul>
+   <li class='active'><a href='#'><span>30STM</span></a></li>
+   <li><a href="../index.htm">About</a></li>
+   <li><a href="gallery/gallery.htm">Gallery</a></li>
+   <li><a href="../songs.htm">Songs</a></li>
+  </ul>
+</div>
+
+
+<div id = "container">
+<h1>Album Art and Wallpapers</h1>
+  <div id="photo">  </div>
+<div id="gallery">
+   <a href="media/A1.png" title = ""><img src="edit/A1.png" width="70" height="70" alt="Blue"></a>
+  <a href="media/A2.jpg" title = ""> <img src="edit/A2.jpg" width="70" height="70" alt="Yellow"/ </a>
+  <a href="media/A3.jpg" title = ""> <img src="edit/A3.jpg" width="70" height="70" alt="Green"</a>
+  <a href="media/A4.jpg" title = ""><img src="edit/A4.jpg" width="70" height="70" alt="Orange"></a>
+  <a href="media/WP1.jpg" title = ""><img src="edit/WP1.jpg" width="70" height="70" alt="Blue"></a>
+  <a href="media/WP2.jpg" title = ""> <img src="edit/WP2.jpg" width="70" height="70" alt="Yellow"/ </a>
+  <a href="media/WP3.jpg" title = ""> <img src="edit/WP3.jpg" width="70" height="70" alt="Green"</a>
+  <a href="media/WP4.jpg" title = ""><img src="edit/WP4.jpg" width="70" height="70" alt="Orange"></a>
+   </div>
+
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+
+$('#gallery img').css('opacity', 0.5);
+
+$('#gallery img').hover(
+ function(){
+    $(this).fadeTo('slow', 1);
+ },
+ function(){
+    $(this).fadeTo('slow', .5);
+});
+
+
+$('#gallery a').click(function(evt) {
+     evt.preventDefault();
+     var imgPath = $(this).attr('href');
+	 var oldImage = $('#photo img');
+	 var newImage = $('<img src="' + imgPath +'" alt = "" />');
+	 $('#photo').prepend(newImage);
+	 oldImage.fadeOut(4500,function(){
+                    $(this).remove();
+     });
+});
+
+$('#gallery a:first').click();
+}); // end ready()
+</script>
+</body>
+
+</html>
